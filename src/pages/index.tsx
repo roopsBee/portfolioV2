@@ -1,7 +1,7 @@
-import React from 'react';
-import { PageProps } from 'gatsby';
+import React from 'react'
+import { PageProps } from 'gatsby'
 
-import Title from '@/components/Title';
+import Title from '@/components/Title'
 
 const Home: React.FC<PageProps> = () => (
   <main>
@@ -12,6 +12,6 @@ const Home: React.FC<PageProps> = () => (
       <a href="https://twitter.com/jpedroschmitz">@jpedroschmitz</a>)
     </p>
   </main>
-);
+)
 
-export default Home;
+export default Home

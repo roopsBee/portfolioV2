@@ -1323,6 +1323,26 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/bubblegum-sans@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/bubblegum-sans/-/bubblegum-sans-4.4.5.tgz#4e5022906edf4b85a8c8edf97eab3a28e66e40ee"
+  integrity sha512-2h4DoO1qLBmT9aCAEWbyA9fB7mU4Rza692NjUQr92ZAVrbSnbOHDPvcL3zrLeSDpKQd0GIGmRhf4zg+8MQjCuw==
+
+"@fontsource/epilogue@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/epilogue/-/epilogue-4.4.5.tgz#f1021de4af491b6cca14a3f984fb1431b62343eb"
+  integrity sha512-/w7lCBX/dIsZG+VTTG2aFIET/kLCaV9i8fIgwREIz2S087oluh8c9JJPy/9jMv064NbnnSqJuWUrnR/1XtreYg==
+
+"@fontsource/josefin-sans@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/josefin-sans/-/josefin-sans-4.4.5.tgz#ce29538af89c16a521ca87eff81c649523680661"
+  integrity sha512-CHK6XWuBHjMIhEByddq+UV4pNUg1JlsuKVaDWWsrEB9ZcgoK6HL5ReMm/cMTUALc89UUyF/lHObEvC6zEXdOlw==
+
+"@fontsource/poppins@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.4.5.tgz#c75dcc453f7a9381de3f9b932366c2457887184c"
+  integrity sha512-pu675yvBGFhAHD8D7uj7C0NaHqDxD7mlgmLM8ziyYL4kYH79fil7rJ6U5X2oaKxoyRk3rxxb9k1fG0CCc7CquA==
+
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

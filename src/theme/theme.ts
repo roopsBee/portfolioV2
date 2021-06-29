@@ -9,3 +9,15 @@ export const theme = {
     borderColor: '#09acec',
   },
 }
+
+export const mq = (bp: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): string => {
+  const breakpoints = {
+    xs: 375,
+    sm: 576,
+    md: 768,
+    lg: 1024,
+    xl: 1200,
+    xxl: 1366,
+  }
+  return `@media (min-width: ${breakpoints[bp]}px)`
+}

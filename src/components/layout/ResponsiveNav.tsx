@@ -3,8 +3,7 @@ import styled from '@emotion/styled'
 import { AiOutlineMenu as Icon } from 'react-icons/ai'
 import { motion, Variants } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
-import { breakpoints } from '@/theme/theme'
-
+import { mq } from '@/theme/theme'
 import NavLink from './NavLink'
 
 const MenuIcon = styled(Icon)<{ open: boolean }>(({ theme, open }) => ({
@@ -22,21 +21,25 @@ const MenuIcon = styled(Icon)<{ open: boolean }>(({ theme, open }) => ({
   },
 }))
 
-const NavBox = styled.nav<{ isBigScreen: boolean }>(({ isBigScreen }) => ({
-  justifyContent: 'flex-end',
-  gap: '20px',
-  display: 'flex',
-  flexDirection: isBigScreen ? 'row' : 'column',
-}))
+const NavBox = styled.nav<{ isBigScreen: boolean }>(({ isBigScreen }) =>
+  mq({
+    justifyContent: 'flex-end',
+    gap: ['10px', '10px', '15px', '20px', '25px'],
+    display: 'flex',
+    flexDirection: isBigScreen ? 'row' : 'column',
+  }),
+)
 
-const MResponsiveMenu = styled(motion.div)(() => ({
-  display: 'flex',
-  gap: '20px',
-}))
+const MResponsiveMenu = styled(motion.div)(() =>
+  mq({
+    display: 'flex',
+    gap: ['10px', '10px', '15px', '20px', '25px'],
+  }),
+)
 
-const ResponsiveNav = () => {
+const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const isBigScreen = useMediaQuery({ minWidth: breakpoints.sm })
+  const isBigScreen = useMediaQuery({ minWidth: breakpoint })
 
   useEffect(() => {
     if (isBigScreen) {

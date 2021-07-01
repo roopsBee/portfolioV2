@@ -1,20 +1,23 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { breakpoints, mq } from '@/theme/theme'
 import ResponsiveNav from './ResponsiveNav'
 
-const HeaderBox = styled.div`
-  position: fixed;
-  width: 100%;
-  display: flex;
-  padding: 25px;
-  justify-content: flex-end;
-`
+const HeaderBox = styled.div(
+  mq({
+    position: 'fixed',
+    width: '100%',
+    display: 'flex',
+    padding: ['5px', '10px', '15px', '20px', '25px'],
+    justifyContent: 'flex-end',
+  }),
+)
 
 const Header: React.FC = () => {
   return (
     <>
       <HeaderBox>
-        <ResponsiveNav />
+        <ResponsiveNav breakpoint={breakpoints.sm} />
       </HeaderBox>
     </>
   )

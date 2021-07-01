@@ -1,3 +1,5 @@
+import facepaint from 'facepaint'
+
 export const theme = {
   colors: {
     'vivid-sky-blue': '#56cbf9ff',
@@ -13,15 +15,22 @@ export const theme = {
 }
 
 export const breakpoints = {
-  xs: 375,
   sm: 576,
   md: 768,
   lg: 1024,
   xl: 1200,
-  xxl: 1366,
+  xxl: 1400,
 }
 
-export const mq = (bp: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): string => {
-  const bps = breakpoints
-  return `@media (min-width: ${bps[bp]}px)`
-}
+// export const mq = (bp: 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): string => {
+//   const bps = breakpoints
+//   return `@media (min-width: ${bps[bp]}px)`
+// }
+
+export const mq = facepaint([
+  `@media(min-width: ${breakpoints.sm}px)`,
+  `@media(min-width: ${breakpoints.md}px)`,
+  `@media(min-width: ${breakpoints.lg}px)`,
+  `@media(min-width: ${breakpoints.xl}px)`,
+  `@media(min-width: ${breakpoints.xxl}px)`,
+])

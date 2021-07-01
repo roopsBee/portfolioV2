@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { AiOutlineMenu as Icon } from 'react-icons/ai'
-import { motion, Variants } from 'framer-motion'
+import { motion, Variants, Transition } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 import { mq } from '@/theme/theme'
 import NavLink from './NavLink'
@@ -42,11 +42,7 @@ const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
   const isBigScreen = useMediaQuery({ minWidth: breakpoint })
 
   useEffect(() => {
-    if (isBigScreen) {
-      setMenuOpen(true)
-    } else {
-      setMenuOpen(false)
-    }
+    setMenuOpen(isBigScreen)
   }, [isBigScreen])
 
   const handleMenuClick = () => {
@@ -64,7 +60,7 @@ const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
     },
   }
 
-  const transition = {
+  const transition: Transition = {
     type: 'spring',
     duration: 0.4,
   }

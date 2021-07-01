@@ -12,14 +12,16 @@ export const theme = {
   boxShadowActive: '0px 1px 3px #fbf700',
 }
 
+export const breakpoints = {
+  xs: 375,
+  sm: 576,
+  md: 768,
+  lg: 1024,
+  xl: 1200,
+  xxl: 1366,
+}
+
 export const mq = (bp: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): string => {
-  const breakpoints = {
-    xs: 375,
-    sm: 576,
-    md: 768,
-    lg: 1024,
-    xl: 1200,
-    xxl: 1366,
-  }
-  return `@media (min-width: ${breakpoints[bp]}px)`
+  const bps = breakpoints
+  return `@media (min-width: ${bps[bp]}px)`
 }

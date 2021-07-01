@@ -11,5 +11,7 @@ declare module '@emotion/react' {
       shadow: string
       borderColor: string
     }
+    boxShadow: string
+    boxShadowActive: string
   }
 }

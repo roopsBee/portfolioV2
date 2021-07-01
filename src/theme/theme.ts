@@ -8,6 +8,8 @@ export const theme = {
     shadow: '#03181d',
     borderColor: '#09acec',
   },
+  boxShadow: '0px 1px 3px #03181d',
+  boxShadowActive: '0px 1px 3px #fbf700',
 }
 
 export const mq = (bp: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): string => {

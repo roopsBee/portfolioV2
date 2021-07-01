@@ -1,35 +1,49 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { useEffect, useState } from 'react'
+import { navigate } from 'gatsby'
 import styled from '@emotion/styled'
+import { useLocation } from '@reach/router'
 
-const StyledLink = styled(Link)(({ theme }) => ({
+const StyledLink = styled.button<{ active: boolean }>(({ theme, active }) => ({
   textDecoration: 'none',
-  border: `1px solid ${theme.colors.borderColor}`,
+  border: `1px solid ${active ? 'white' : theme.colors.borderColor}`,
   padding: '1px 10px',
   fontSize: '18px',
   backgroundColor: theme.colors['vivid-sky-blue'],
   borderRadius: '5px',
   textTransform: 'capitalize',
   color: theme.colors['dark-lava'],
-  boxShadow: '0px 1px 3px #03181d',
+  boxShadow: `${active ? '0px 1px 3px #fbf700' : theme.boxShadow}`,
   transition: 'all 0.3s ease',
   minWidth: '95px',
   textAlign: 'center',
   '&:hover': {
-    boxShadow: '0px 1px 3px #fbf700',
+    boxShadow: theme.boxShadowActive,
     borderColor: 'white',
   },
 }))
 
-interface Props {
+type Props = {
   to: string
 }
 
-const NavLink: React.FC<Props> = ({ to, children }) => {
+const NavLink: React.FC<Props> = ({ to, children, ...props }) => {
+  const [active, setActive] = useState(false)
+  const location = useLocation()
+  useEffect(() => {
+    if (to === location.pathname) {
+      setActive(true)
+    } else {
+      setActive(false)
+    }
+  }, [location])
+
   return (
     <StyledLink
-      to={to}
-      activeStyle={{ borderColor: 'white', boxShadow: '0px 1px 3px #fbf700' }}
+      {...props}
+      onClick={() => {
+        navigate(to)
+      }}
+      active={active}
     >
       {children}
     </StyledLink>

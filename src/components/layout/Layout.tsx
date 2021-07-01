@@ -23,6 +23,7 @@ const Layout: React.FC<PageProps> = ({ children }) => {
             boxSizing: 'border-box',
             fontFamily: 'Poppins, sans-serif',
           },
+          body: { overflowX: 'hidden' },
         }}
       />
       <Header />

@@ -15,7 +15,8 @@ const MenuIcon = styled(Icon)<{ open: boolean }>(({ theme, open }) => ({
   transition: 'all 0.3s ease',
   zIndex: 10,
   overflow: 'hidden',
-  backgroundColor: `${theme.colors['vivid-sky-blue']}`,
+  backgroundColor: `${theme.colors.primary}`,
+  cursor: 'pointer',
   '&:active': {
     border: '1px solid white',
     boxShadow: theme.boxShadowActive,
@@ -85,6 +86,7 @@ const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
   return (
     <MResponsiveMenu
       variants={container}
+      initial="hidden"
       animate={menuOpen ? 'show' : 'hidden'}
     >
       {!isBigScreen && (

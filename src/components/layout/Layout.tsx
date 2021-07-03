@@ -8,7 +8,7 @@ import Header from './Header'
 const Content = styled.main`
   min-height: 100vh;
   width: 100vw;
-  background-color: ${(props) => props.theme.colors['vivid-sky-blue']};
+  background-color: ${(props) => props.theme.colors.background};
   display: flex;
   flex-direction: column;
 `

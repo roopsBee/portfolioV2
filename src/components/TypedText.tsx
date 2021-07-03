@@ -14,7 +14,7 @@ const TypedBox = styled(motion.div)(({ theme }) =>
     color: 'white',
     border: `solid ${theme.colors.borderColor}`,
     borderWidth: '1px 1px 1px 0px',
-    boxShadow: `3px 3px 10px ${theme.colors.shadow}`,
+    boxShadow: `3px 3px 10px 1px ${theme.colors.shadow}`,
     borderRadius: '0px 10px 10px 0px',
     '& .Typewriter__wrapper, .Typewriter__cursor ': {
       fontFamily: `${theme.fonts.IBM}, sans-serif`,

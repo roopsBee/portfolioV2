@@ -94,15 +94,15 @@ const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
       )}
 
       <NavBox isBigScreen={isBigScreen}>
-        <motion.div variants={item}>
-          <NavLink to="/">Home</NavLink>
-        </motion.div>
-        <motion.div variants={item}>
-          <NavLink to="/portfolio/">Portfolio</NavLink>
-        </motion.div>
-        <motion.div variants={item}>
-          <NavLink to="/contact/">Contact</NavLink>
-        </motion.div>
+        <NavLink motionProps={{ variants: item }} to="/">
+          Home
+        </NavLink>
+        <NavLink motionProps={{ variants: item }} to="/portfolio/">
+          Portfolio
+        </NavLink>
+        <NavLink motionProps={{ variants: item }} to="/contact/">
+          Contact
+        </NavLink>
       </NavBox>
     </MResponsiveMenu>
   )

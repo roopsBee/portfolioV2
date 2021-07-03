@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { navigate } from 'gatsby'
 import styled from '@emotion/styled'
 import { useLocation } from '@reach/router'
+import { motion, MotionProps } from 'framer-motion'
 
 const StyledLink = styled.button<{ active: boolean }>(({ theme, active }) => ({
   textDecoration: 'none',
@@ -24,9 +25,10 @@ const StyledLink = styled.button<{ active: boolean }>(({ theme, active }) => ({
 
 type Props = {
   to: string
+  motionProps?: MotionProps
 }
 
-const NavLink: React.FC<Props> = ({ to, children, ...props }) => {
+const NavLink: React.FC<Props> = ({ to, children, motionProps, ...props }) => {
   const [active, setActive] = useState(false)
   const location = useLocation()
   useEffect(() => {
@@ -38,15 +40,17 @@ const NavLink: React.FC<Props> = ({ to, children, ...props }) => {
   }, [location])
 
   return (
-    <StyledLink
-      {...props}
-      onClick={() => {
-        navigate(to)
-      }}
-      active={active}
-    >
-      {children}
-    </StyledLink>
+    <motion.div {...motionProps}>
+      <StyledLink
+        {...props}
+        onClick={() => {
+          navigate(to)
+        }}
+        active={active}
+      >
+        {children}
+      </StyledLink>
+    </motion.div>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Typewriter from 'typewriter-effect'
+import { motion, MotionProps } from 'framer-motion'
 import { mq } from '../theme/theme'
 
 const TypedBox = styled.div(({ theme }) =>
@@ -24,33 +25,40 @@ const TypedBox = styled.div(({ theme }) =>
   }),
 )
 
-const TypedText: React.FC<{ handleEnd: () => void }> = ({ handleEnd }) => {
+interface Props {
+  handleEnd?: () => void
+  motionProps?: MotionProps
+}
+
+const TypedText: React.FC<Props> = ({ handleEnd, motionProps }) => {
   const text1 = 'Hi!'
   const text2 = " I'm Roopesh."
   const text3 = 'createScene()'
   const text4 = '<br>Creating scene...'
 
   return (
-    <TypedBox>
-      <Typewriter
-        onInit={(typewriter) => {
-          typewriter
-            .pauseFor(1000)
-            .typeString(text1)
-            .pauseFor(1000)
-            .typeString(text2)
-            .pauseFor(1500)
-            .deleteAll()
-            .pauseFor(1000)
-            .typeString(text3)
-            .pauseFor(1000)
-            .pasteString(text4, null)
-            .pauseFor(300)
-            .callFunction(handleEnd)
-            .start()
-        }}
-      />
-    </TypedBox>
+    <motion.div {...motionProps}>
+      <TypedBox>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .pauseFor(1000)
+              .typeString(text1)
+              .pauseFor(1000)
+              .typeString(text2)
+              .pauseFor(1500)
+              .deleteAll()
+              .pauseFor(1000)
+              .typeString(text3)
+              .pauseFor(1000)
+              .pasteString(text4, null)
+              .pauseFor(300)
+              .callFunction(handleEnd)
+              .start()
+          }}
+        />
+      </TypedBox>
+    </motion.div>
   )
 }
 

@@ -4,14 +4,37 @@ import { motion, Variants, useMotionValue, useTransform } from 'framer-motion'
 import { PageProps } from 'gatsby'
 import TypedText from '../components/TypedText'
 
+const typedVariant: Variants = {
+  initial: {
+    x: '-100%',
+    transition: {
+      duration: 0.3,
+    },
+  },
+  show: {
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
+
 const Home: React.FC<PageProps> = () => {
+  const [animate, setAnimate] = useState(false)
   const handleEnd = () => {
-    console.log('end')
+    setAnimate(true)
   }
 
   return (
     <>
-      <TypedText handleEnd={handleEnd} />
+      <TypedText
+        motionProps={{
+          variants: typedVariant,
+          initial: 'initial',
+          animate: animate ? 'initial' : 'show',
+        }}
+        handleEnd={handleEnd}
+      />
     </>
   )
 }

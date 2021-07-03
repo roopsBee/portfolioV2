@@ -1,19 +1,20 @@
 import React from 'react'
+import { CSSObject } from '@emotion/react'
 import styled from '@emotion/styled'
 import Typewriter from 'typewriter-effect'
 import { motion, MotionProps } from 'framer-motion'
 import { mq } from '../theme/theme'
 
-const TypedBox = styled.div(({ theme }) =>
+const TypedBox = styled(motion.div)(({ theme }) =>
   mq({
     width: ['250px', '300px', '400px', '500px', '600px'],
-    height: ['150px', '175px', '200px', '200px', '200px'],
-    padding: '20px',
+    height: ['135px', '160px', '200px', '200px', '200px'],
+    padding: '10px',
     backgroundColor: 'black',
     color: 'white',
     border: `solid ${theme.colors.borderColor}`,
     borderWidth: '1px 1px 1px 0px',
-    boxShadow: `${theme.boxShadow}`,
+    boxShadow: `3px 3px 10px ${theme.colors.shadow}`,
     borderRadius: '0px 10px 10px 0px',
     '& .Typewriter__wrapper, .Typewriter__cursor ': {
       fontFamily: `${theme.fonts.IBM}, sans-serif`,
@@ -28,37 +29,36 @@ const TypedBox = styled.div(({ theme }) =>
 interface Props {
   handleEnd?: () => void
   motionProps?: MotionProps
+  css?: CSSObject
 }
 
-const TypedText: React.FC<Props> = ({ handleEnd, motionProps }) => {
+const TypedText: React.FC<Props> = ({ handleEnd, motionProps, ...props }) => {
   const text1 = 'Hi!'
   const text2 = " I'm Roopesh."
   const text3 = 'createScene()'
   const text4 = '<br>Creating scene...'
 
   return (
-    <motion.div {...motionProps}>
-      <TypedBox>
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .pauseFor(1000)
-              .typeString(text1)
-              .pauseFor(1000)
-              .typeString(text2)
-              .pauseFor(1500)
-              .deleteAll()
-              .pauseFor(1000)
-              .typeString(text3)
-              .pauseFor(1000)
-              .pasteString(text4, null)
-              .pauseFor(300)
-              .callFunction(handleEnd)
-              .start()
-          }}
-        />
-      </TypedBox>
-    </motion.div>
+    <TypedBox {...motionProps} {...props}>
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .pauseFor(1000)
+            .typeString(text1)
+            .pauseFor(1000)
+            .typeString(text2)
+            .pauseFor(1500)
+            .deleteAll()
+            .pauseFor(1000)
+            .typeString(text3)
+            .pauseFor(1000)
+            .pasteString(text4, null)
+            .pauseFor(300)
+            .callFunction(handleEnd)
+            .start()
+        }}
+      />
+    </TypedBox>
   )
 }
 

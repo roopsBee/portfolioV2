@@ -5,7 +5,7 @@ import { PageProps } from 'gatsby'
 
 import Header from './Header'
 
-const Content = styled.div`
+const Content = styled.main`
   min-height: 100vh;
   width: 100vw;
   background-color: ${(props) => props.theme.colors['vivid-sky-blue']};

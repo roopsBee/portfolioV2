@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 
 import { motion, Variants, useMotionValue, useTransform } from 'framer-motion'
 import { PageProps } from 'gatsby'
+import styled from '@emotion/styled'
+import { mq } from '@/theme/theme'
 import TypedText from '../components/TypedText'
 
-const typedVariant: Variants = {
+const Container = styled.div({})
+
+const typedTextVariant: Variants = {
   initial: {
     x: '-100%',
     transition: {
@@ -12,7 +16,7 @@ const typedVariant: Variants = {
     },
   },
   show: {
-    x: 0,
+    x: '-3%',
     transition: {
       duration: 0.5,
     },
@@ -22,19 +26,26 @@ const typedVariant: Variants = {
 const Home: React.FC<PageProps> = () => {
   const [animate, setAnimate] = useState(false)
   const handleEnd = () => {
-    setAnimate(true)
+    setAnimate(false)
   }
 
   return (
     <>
-      <TypedText
-        motionProps={{
-          variants: typedVariant,
-          initial: 'initial',
-          animate: animate ? 'initial' : 'show',
-        }}
-        handleEnd={handleEnd}
-      />
+      <Container>
+        <TypedText
+          css={mq({
+            position: 'absolute',
+            top: '30%',
+            paddingLeft: ['30px'],
+          })}
+          motionProps={{
+            variants: typedTextVariant,
+            initial: 'initial',
+            animate: animate ? 'initial' : 'show',
+          }}
+          handleEnd={handleEnd}
+        />
+      </Container>
     </>
   )
 }

@@ -12,6 +12,9 @@ export const theme = {
   },
   boxShadow: '0px 1px 3px #03181d',
   boxShadowActive: '0px 1px 3px #fbf700',
+  fonts: {
+    IBM: 'IBM Plex Mono',
+  },
 }
 
 export const breakpoints = {
@@ -21,11 +24,6 @@ export const breakpoints = {
   xl: 1200,
   xxl: 1400,
 }
-
-// export const mq = (bp: 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): string => {
-//   const bps = breakpoints
-//   return `@media (min-width: ${bps[bp]}px)`
-// }
 
 export const mq = facepaint([
   `@media(min-width: ${breakpoints.sm}px)`,

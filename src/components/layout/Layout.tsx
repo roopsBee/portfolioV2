@@ -10,6 +10,7 @@ const Content = styled.div`
   width: 100vw;
   background-color: ${(props) => props.theme.colors['vivid-sky-blue']};
   display: flex;
+  flex-direction: column;
 `
 
 const Layout: React.FC<PageProps> = ({ children }) => {

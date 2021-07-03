@@ -13,5 +13,6 @@ declare module '@emotion/react' {
     }
     boxShadow: string
     boxShadowActive: string
+    fonts: { IBM: string }
   }
 }

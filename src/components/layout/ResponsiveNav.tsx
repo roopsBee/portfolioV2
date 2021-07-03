@@ -15,6 +15,7 @@ const MenuIcon = styled(Icon)<{ open: boolean }>(({ theme, open }) => ({
   transition: 'all 0.3s ease',
   zIndex: 10,
   overflow: 'hidden',
+  backgroundColor: `${theme.colors['vivid-sky-blue']}`,
   '&:active': {
     border: '1px solid white',
     boxShadow: theme.boxShadowActive,

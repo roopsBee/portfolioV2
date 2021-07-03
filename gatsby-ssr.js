@@ -4,6 +4,7 @@ import { theme } from './src/theme/theme'
 import Layout from './src/components/layout/Layout'
 
 import '@fontsource/poppins'
+import '@fontsource/ibm-plex-mono'
 
 export const wrapRootElement = ({ element }) => {
   return <ThemeProvider theme={theme}>{element}</ThemeProvider>

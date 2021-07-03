@@ -10,6 +10,7 @@ const HeaderBox = styled.div(
     display: 'flex',
     padding: ['5px', '10px', '15px', '20px', '25px'],
     justifyContent: 'flex-end',
+    zIndex: 100,
   }),
 )
 

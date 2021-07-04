@@ -2,7 +2,7 @@ import React from 'react'
 import { CSSObject } from '@emotion/react'
 import styled from '@emotion/styled'
 import Typewriter from 'typewriter-effect'
-import { motion, MotionProps } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { mq } from '../theme/theme'
 
 const TypedBox = styled(motion.div)(({ theme }) =>
@@ -28,18 +28,38 @@ const TypedBox = styled(motion.div)(({ theme }) =>
 
 interface Props {
   handleEnd?: () => void
-  motionProps?: MotionProps
   css?: CSSObject
+  animate: boolean
 }
 
-const TypedText: React.FC<Props> = ({ handleEnd, motionProps, ...props }) => {
+const TypedText: React.FC<Props> = ({ handleEnd, animate, ...props }) => {
   const text1 = 'Hi!'
   const text2 = " I'm Roopesh."
   const text3 = 'createScene()'
   const text4 = '<br>Creating scene...'
 
+  const typedTextVariant: Variants = {
+    initial: {
+      x: '-110%',
+      transition: {
+        duration: 0.3,
+      },
+    },
+    show: {
+      x: '-3%',
+      transition: {
+        duration: 0.5,
+      },
+    },
+  }
+
   return (
-    <TypedBox {...motionProps} {...props}>
+    <TypedBox
+      {...props}
+      variants={typedTextVariant}
+      initial="initial"
+      animate={animate ? 'initial' : 'show'}
+    >
       <Typewriter
         onInit={(typewriter) => {
           typewriter

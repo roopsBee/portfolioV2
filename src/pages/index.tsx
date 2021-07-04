@@ -6,6 +6,7 @@ import { mq } from '@/theme/theme'
 import FrontEndDeveloper from '../components/FrontEndDeveloper'
 import Name from '../components/Name'
 import TypedText from '../components/TypedText'
+import Tree from '../components/Tree'
 
 const Container = styled(motion.div)({
   padding: '20px',
@@ -14,7 +15,7 @@ const Container = styled(motion.div)({
 })
 
 const Home: React.FC<PageProps> = () => {
-  const [animate, setAnimate] = useState(false)
+  const [animate, setAnimate] = useState(true)
 
   const handleTypedTextEnd = async () => {
     setAnimate(true)
@@ -49,6 +50,16 @@ const Home: React.FC<PageProps> = () => {
           })}
           animate={animate}
           delay={1.5}
+        />
+        <Tree
+          css={mq({
+            bottom: '10%',
+            left: '5%',
+            width: 'auto',
+            height: '40%',
+          })}
+          animate={animate}
+          delay={1}
         />
       </Container>
     </>

@@ -8,6 +8,7 @@ const Svg = styled(motion.svg)(() => ({
   width: '20%',
   height: 'auto',
   display: 'block',
+  transform: 'translate(-50%)',
 }))
 
 const Path = styled(motion.path)({})

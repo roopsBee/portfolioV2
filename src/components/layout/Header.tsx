@@ -6,7 +6,7 @@ import ResponsiveNav from './ResponsiveNav'
 const HeaderBox = styled.div(
   mq({
     position: 'fixed',
-    width: '100%',
+    width: '100vw',
     display: 'flex',
     padding: ['5px', '10px', '15px', '20px', '25px'],
     justifyContent: 'flex-end',

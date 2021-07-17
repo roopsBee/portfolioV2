@@ -33,7 +33,7 @@ const Tree: React.FC<Props> = ({ delay = 0, animate, ...props }) => {
         fill: `${fill}00`,
         stroke: thm.colors['dark-text'],
         transition: {
-          delay: item * 0.5,
+          delay: item * 0.2,
           duration: 1,
           ease: 'easeOut',
         },

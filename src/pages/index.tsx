@@ -56,16 +56,16 @@ const Home: React.FC<PageProps> = () => {
           animate={animate}
           delay={2.5}
         />
-        {/* <Trees delay={1} grassDelay={5} amount={10} animate={animate} /> */}
         <Trees x={10} y={12} amount={1} animate={animate} />
         <Trees x={20} y={5} amount={1} animate={animate} />
         <Trees x={70} y={7} amount={1} animate={animate} />
-        <Trees x={90} y={13} amount={1} animate={animate} />
         <Trees x={95} y={10} amount={1} animate={animate} />
         <Trees x={35} y={7} amount={1} animate={animate} />
         <Trees x={55} y={11} amount={1} animate={animate} />
         <Trees x={30} y={13} amount={1} animate={animate} />
-        <Trees amount={3} animate={animate} />
+        <Trees x={77} y={5} amount={1} animate={animate} />
+        <Trees amount={7} y={13} animate={animate} />
+        <Trees amount={3} y={12} animate={animate} />
         <HillyBackGround animate={animate} delay={7} />
         <GrassBackground animate={animate} delay={8} />
       </Container>

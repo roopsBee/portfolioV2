@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { PageProps } from 'gatsby'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
+import Cloud from '../components/Cloud'
 import HillyBackGround from '../components/HillyBackGround'
 import GrassBackground from '../components/GrassBackground'
 import Trees from '../components/Trees'
@@ -56,6 +57,7 @@ const Home: React.FC<PageProps> = () => {
           animate={animate}
           delay={2.5}
         />
+        <Cloud x={50} y={10} moveSpeed={1} animate={animate} delay={1} />
         <Trees x={10} y={12} amount={1} animate={animate} />
         <Trees x={20} y={5} amount={1} animate={animate} />
         <Trees x={70} y={7} amount={1} animate={animate} />

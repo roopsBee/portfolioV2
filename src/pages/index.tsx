@@ -57,7 +57,30 @@ const Home: React.FC<PageProps> = () => {
           animate={animate}
           delay={2.5}
         />
-        <Cloud x={50} y={10} moveSpeed={1} animate={animate} delay={1} />
+        <Cloud
+          x={20}
+          y={15}
+          moveSpeed={0.1}
+          animate={animate}
+          delay={1}
+          css={{ zIndex: 6 }}
+        />
+        <Cloud
+          x={50}
+          y={10}
+          moveSpeed={0.05}
+          animate={animate}
+          delay={1}
+          css={{ height: '15%', zIndex: 3 }}
+        />
+        <Cloud
+          x={80}
+          y={40}
+          moveSpeed={0.2}
+          animate={animate}
+          delay={1}
+          css={{ height: '10%', zIndex: 1 }}
+        />
         <Trees x={10} y={12} amount={1} animate={animate} />
         <Trees x={20} y={5} amount={1} animate={animate} />
         <Trees x={70} y={7} amount={1} animate={animate} />
@@ -66,8 +89,8 @@ const Home: React.FC<PageProps> = () => {
         <Trees x={30} y={13} amount={1} animate={animate} />
         <Trees amount={6} y={13} animate={animate} />
         <Trees amount={2} y={12} animate={animate} />
-        <HillyBackGround animate={animate} delay={7} />
-        <GrassBackground animate={animate} delay={8} />
+        <HillyBackGround animate={animate} delay={7} css={{ zIndex: 5 }} />
+        <GrassBackground animate={animate} delay={8} css={{ zIndex: 6 }} />
       </Container>
     </>
   )

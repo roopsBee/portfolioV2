@@ -76,7 +76,7 @@ const Trees: React.FC<Props> = ({
             <Grass
               css={{
                 left,
-                bottom: `${bottom - 1}%`,
+                bottom: `${bottom - 1 * ((100 - bottomPercent) / 100)}%`,
                 zIndex,
                 height: `calc(${height}/4)`,
                 transform: grassPosition(),

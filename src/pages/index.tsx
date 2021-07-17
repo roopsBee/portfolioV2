@@ -62,7 +62,7 @@ const Home: React.FC<PageProps> = () => {
           y={15}
           moveSpeed={0.1}
           animate={animate}
-          delay={1}
+          delay={4}
           css={{ zIndex: 6 }}
         />
         <Cloud
@@ -70,7 +70,7 @@ const Home: React.FC<PageProps> = () => {
           y={10}
           moveSpeed={0.05}
           animate={animate}
-          delay={1}
+          delay={4.2}
           css={{ height: '15%', zIndex: 3 }}
         />
         <Cloud
@@ -78,19 +78,61 @@ const Home: React.FC<PageProps> = () => {
           y={40}
           moveSpeed={0.2}
           animate={animate}
-          delay={1}
+          delay={4.4}
           css={{ height: '10%', zIndex: 1 }}
         />
-        <Trees x={10} y={12} amount={1} animate={animate} />
-        <Trees x={20} y={5} amount={1} animate={animate} />
-        <Trees x={70} y={7} amount={1} animate={animate} />
-        <Trees x={95} y={10} amount={1} animate={animate} />
-        <Trees x={55} y={11} amount={1} animate={animate} />
-        <Trees x={30} y={13} amount={1} animate={animate} />
-        <Trees amount={6} y={13} animate={animate} />
-        <Trees amount={2} y={12} animate={animate} />
-        <HillyBackGround animate={animate} delay={7} css={{ zIndex: 5 }} />
-        <GrassBackground animate={animate} delay={8} css={{ zIndex: 6 }} />
+        <Trees
+          x={10}
+          y={12}
+          amount={1}
+          animate={animate}
+          delay={0.2}
+          grassDelay={4}
+        />
+        <Trees
+          x={20}
+          y={5}
+          amount={1}
+          animate={animate}
+          delay={0.3}
+          grassDelay={4}
+        />
+        <Trees
+          x={70}
+          y={7}
+          amount={1}
+          animate={animate}
+          delay={0.4}
+          grassDelay={4}
+        />
+        <Trees
+          x={95}
+          y={10}
+          amount={1}
+          animate={animate}
+          delay={0.5}
+          grassDelay={4}
+        />
+        <Trees
+          x={55}
+          y={11}
+          amount={1}
+          animate={animate}
+          delay={0.6}
+          grassDelay={4}
+        />
+        <Trees
+          x={30}
+          y={13}
+          amount={1}
+          animate={animate}
+          delay={0.7}
+          grassDelay={4}
+        />
+        <Trees amount={6} y={13} animate={animate} delay={0.8} grassDelay={4} />
+        <Trees amount={2} y={12} animate={animate} delay={0.9} grassDelay={4} />
+        <HillyBackGround animate={animate} delay={4.5} css={{ zIndex: 5 }} />
+        <GrassBackground animate={animate} delay={4} css={{ zIndex: 6 }} />
       </Container>
     </>
   )

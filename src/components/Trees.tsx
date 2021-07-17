@@ -1,8 +1,8 @@
 import React from 'react'
 import { mq } from '@/theme/theme'
-import getRandomBetween from '../../helpers/getRandomBetween'
-import Grass from '../Grass'
-import Tree from '../Tree'
+import getRandomBetween from '../helpers/getRandomBetween'
+import Grass from './Grass'
+import Tree from './Tree'
 
 interface Props {
   animate: boolean

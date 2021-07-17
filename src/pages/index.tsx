@@ -3,7 +3,9 @@ import { motion } from 'framer-motion'
 import { PageProps } from 'gatsby'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
-import Trees from '../components/layout/Trees'
+import HillyBackGround from '../components/HillyBackGround'
+import GrassBackground from '../components/GrassBackground'
+import Trees from '../components/Trees'
 import FrontEndDeveloper from '../components/FrontEndDeveloper'
 import Name from '../components/Name'
 import TypedText from '../components/TypedText'
@@ -55,6 +57,8 @@ const Home: React.FC<PageProps> = () => {
           delay={2.5}
         />
         <Trees delay={1} grassDelay={5} amount={10} animate={animate} />
+        <HillyBackGround animate={animate} delay={7} />
+        <GrassBackground animate={animate} delay={8} />
       </Container>
     </>
   )

@@ -60,10 +60,8 @@ const Home: React.FC<PageProps> = () => {
         <Trees x={20} y={5} amount={1} animate={animate} />
         <Trees x={70} y={7} amount={1} animate={animate} />
         <Trees x={95} y={10} amount={1} animate={animate} />
-        {/* <Trees x={35} y={7} amount={1} animate={animate} /> */}
         <Trees x={55} y={11} amount={1} animate={animate} />
         <Trees x={30} y={13} amount={1} animate={animate} />
-        {/* <Trees x={77} y={5} amount={1} animate={animate} /> */}
         <Trees amount={6} y={13} animate={animate} />
         <Trees amount={2} y={12} animate={animate} />
         <HillyBackGround animate={animate} delay={7} />

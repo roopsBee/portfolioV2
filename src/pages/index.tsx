@@ -56,7 +56,8 @@ const Home: React.FC<PageProps> = () => {
           animate={animate}
           delay={2.5}
         />
-        <Trees delay={1} grassDelay={5} amount={10} animate={animate} />
+        {/* <Trees delay={1} grassDelay={5} amount={10} animate={animate} /> */}
+        <Trees x={50} y={5} amount={1} animate={animate} />
         <HillyBackGround animate={animate} delay={7} />
         <GrassBackground animate={animate} delay={8} />
       </Container>

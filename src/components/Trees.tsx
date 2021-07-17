@@ -9,6 +9,8 @@ interface Props {
   amount?: number
   delay?: number
   grassDelay?: number
+  x?: number
+  y?: number
 }
 
 const Trees: React.FC<Props> = ({
@@ -16,13 +18,32 @@ const Trees: React.FC<Props> = ({
   amount = 10,
   delay = 0,
   grassDelay = 0,
+  x,
+  y,
 }) => {
+  let treeX
+  let treeY
+  if (x && x < 0) {
+    treeX = 0
+  } else if (x && x > 100) {
+    treeX = 100
+  } else if (x) {
+    treeX = x
+  }
+  if (y && y < 5) {
+    treeY = 5
+  } else if (y && y > 14) {
+    treeY = 14
+  } else if (y) {
+    treeY = y
+  }
+
   return (
     <>
       {new Array(amount).fill(1).map((t, i) => {
-        const bottom = getRandomBetween(5, 15) // tree position from bottom
+        const bottom = treeY || getRandomBetween(5, 15) // tree position from bottom
         const bottomPercent = ((bottom - 4) / 10) * 100 // map bottom 5-15 to 1-100%
-        const left = `${getRandomBetween(0, 100)}%` // position from left
+        const left = `${treeX}%` || `${getRandomBetween(0, 100)}%` // position from left
         const height = `${((100 - bottomPercent) / 100) * 40}%` // tree size
         const zIndex = Math.floor((15 / bottom) * 100)
         const grassPosition = () => `translate(${getRandomBetween(-85, 0)}%)`

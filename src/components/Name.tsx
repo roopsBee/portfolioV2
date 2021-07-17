@@ -12,6 +12,7 @@ const SvgWrapper = styled(motion.div)(({ theme }) =>
     borderRadius: '0px 10px 10px 0px',
     boxShadow: `1px 1px 3px 1px ${theme.colors.shadow}`,
     overflow: 'hidden',
+    zIndex: 1000,
   }),
 )
 

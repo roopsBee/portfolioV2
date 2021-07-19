@@ -16,7 +16,7 @@ const Container = styled(motion.div)({
   height: '100vh',
   width: '100vw',
 })
-const Scene = () => {
+const Scene: React.FC = () => {
   const [animate, setAnimate] = useState(true)
 
   const handleTypedTextEnd = async () => {

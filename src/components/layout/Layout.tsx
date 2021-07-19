@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { Global } from '@emotion/react'
 import { PageProps } from 'gatsby'
@@ -14,7 +14,14 @@ const Content = styled.main`
   flex-direction: column;
 `
 
-const Layout: React.FC<PageProps> = ({ children }) => {
+const Layout: React.FC<PageProps> = ({ children, location }) => {
+  const [isIndex, setIsIndex] = useState(true)
+
+  useEffect(() => {
+    if (location.pathname === '/') setIsIndex(true)
+    else setIsIndex(false)
+  }, [location])
+
   return (
     <>
       <Global
@@ -30,7 +37,7 @@ const Layout: React.FC<PageProps> = ({ children }) => {
       />
       <Header />
       <Content>
-        <Scene />
+        <Scene skipTypedText={!isIndex} isHideName={!isIndex} />
         {children}
       </Content>
     </>

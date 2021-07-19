@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
@@ -16,8 +16,18 @@ const Container = styled(motion.div)({
   height: '100vh',
   width: '100vw',
 })
-const Scene: React.FC = () => {
+
+interface Props {
+  isHideName?: boolean
+  skipTypedText?: boolean
+}
+
+const Scene: React.FC<Props> = ({ isHideName, skipTypedText }) => {
   const [animate, setAnimate] = useState(false)
+
+  useEffect(() => {
+    if (skipTypedText) setAnimate(true)
+  }, [skipTypedText])
 
   const handleTypedTextEnd = async () => {
     setAnimate(true)
@@ -34,19 +44,23 @@ const Scene: React.FC = () => {
         handleEnd={handleTypedTextEnd}
       />
       <Name
+        isHide={isHideName}
         css={mq({
           position: 'absolute',
           top: [45, 60, 70, 85, 100],
           left: 0,
+          zIndex: 1000,
         })}
         animate={animate}
         delay={0.5}
       />
       <FrontEndDeveloper
+        isHide={isHideName}
         css={mq({
           position: 'absolute',
           top: [80, 105, 120, 140, 155],
           left: 0,
+          zIndex: 1000,
         })}
         animate={animate}
         delay={2.5}

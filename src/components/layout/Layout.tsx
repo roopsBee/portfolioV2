@@ -4,6 +4,7 @@ import { Global } from '@emotion/react'
 import { PageProps } from 'gatsby'
 
 import Header from './Header'
+import Scene from '../scene/Scene'
 
 const Content = styled.main`
   min-height: 100vh;
@@ -28,7 +29,10 @@ const Layout: React.FC<PageProps> = ({ children }) => {
         }}
       />
       <Header />
-      <Content>{children}</Content>
+      <Content>
+        <Scene />
+        {children}
+      </Content>
     </>
   )
 }

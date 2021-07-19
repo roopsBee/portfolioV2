@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { mq } from '@/theme/theme'
 import getRandomBetween from '../../helpers/getRandomBetween'
 import Grass from './Grass'
@@ -37,10 +37,9 @@ const Trees: React.FC<Props> = ({
   } else if (y) {
     treeY = y
   }
-
-  return (
-    <>
-      {new Array(amount).fill(1).map((t, i) => {
+  const trees = useMemo(
+    () =>
+      new Array(amount).fill(1).map((t, i) => {
         const bottom = treeY || getRandomBetween(5, 15) // tree position from bottom
         const bottomPercent = ((bottom - 4) / 10) * 100 // map bottom 5-15 to 1-100%
         const left = treeX ? `${treeX}%` : `${getRandomBetween(0, 100)}%` // position from left
@@ -86,9 +85,11 @@ const Trees: React.FC<Props> = ({
             />
           </div>
         )
-      })}
-    </>
+      }),
+    [],
   )
+
+  return <>{trees}</>
 }
 
 export default Trees

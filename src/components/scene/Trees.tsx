@@ -86,7 +86,7 @@ const Trees: React.FC<Props> = ({
           </div>
         )
       }),
-    [],
+    [animate],
   )
 
   return <>{trees}</>

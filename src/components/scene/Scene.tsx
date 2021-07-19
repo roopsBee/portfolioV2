@@ -11,13 +11,13 @@ import Name from './Name'
 import TypedText from './TypedText'
 
 const Container = styled(motion.div)({
-  position: 'relative',
+  position: 'absolute',
   overflowX: 'hidden',
   height: '100vh',
   width: '100vw',
 })
 const Scene: React.FC = () => {
-  const [animate, setAnimate] = useState(true)
+  const [animate, setAnimate] = useState(false)
 
   const handleTypedTextEnd = async () => {
     setAnimate(true)

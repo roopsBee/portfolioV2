@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation, Variants } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
-import { mq, theme as thm } from '../theme/theme'
+import { mq, theme as thm } from '../../theme/theme'
 
 const SvgWrapper = styled(motion.div)(({ theme }) =>
   mq({

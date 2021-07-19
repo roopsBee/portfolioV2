@@ -3,7 +3,7 @@ import { CSSObject } from '@emotion/react'
 import styled from '@emotion/styled'
 import Typewriter from 'typewriter-effect'
 import { motion, Variants } from 'framer-motion'
-import { mq } from '../theme/theme'
+import { mq } from '../../theme/theme'
 
 const TypedBox = styled(motion.div)(({ theme }) =>
   mq({

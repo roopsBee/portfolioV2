@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation, Variants } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
-import { theme as thm } from '../theme/theme'
+import { theme as thm } from '../../theme/theme'
 
 const Svg = styled(motion.svg)(() => ({
   position: 'absolute',

@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
 import { motion, useAnimation, Variants } from 'framer-motion'
-import styled, { CSSObject } from '@emotion/styled'
+import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
 import PreviewCard from '../components/card/PreviewCard'
 

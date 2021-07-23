@@ -96,7 +96,14 @@ const PreviewCard: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <Card css={css} {...props}>
+    <Card
+      key={title}
+      animate={{ rotateY: 0, opacity: 1, transition: { duration: 0.5 } }}
+      initial={{ rotateY: 90, opacity: 0 }}
+      exit={{ opacity: 0, rotateY: -90, transition: { duration: 0.4 } }}
+      css={css}
+      {...props}
+    >
       <Header>{title}</Header>
       <Img src={image} alt={imageAlt} />
       <Nav>

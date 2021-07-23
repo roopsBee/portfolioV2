@@ -11,7 +11,7 @@ import Name from './Name'
 import TypedText from './TypedText'
 
 const Container = styled(motion.div)({
-  position: 'absolute',
+  position: 'fixed',
   overflowX: 'hidden',
   height: '100vh',
   width: '100vw',

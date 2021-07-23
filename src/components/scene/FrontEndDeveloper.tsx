@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation, Variants } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
+import { DynamicStyle } from 'facepaint'
 import { mq, theme as thm } from '../../theme/theme'
 
 const SvgWrapper = styled(motion.div)(({ theme }) =>
@@ -24,7 +25,7 @@ const Svg = styled(motion.svg)(() => ({
 const Path = styled(motion.path)({})
 
 interface Props {
-  css?: CSSObject
+  css?: CSSObject | DynamicStyle[]
   animate: boolean
   delay?: number
   isHide?: boolean

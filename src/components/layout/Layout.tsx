@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { Global } from '@emotion/react'
 import { PageProps } from 'gatsby'
-
+import loadable from '@loadable/component'
 import Header from './Header'
-import Scene from '../scene/Scene'
+
+const Scene = loadable(() => import('../scene/Scene'))
 
 const Content = styled.main`
   min-height: 100vh;

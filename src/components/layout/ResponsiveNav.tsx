@@ -4,6 +4,7 @@ import { AiOutlineMenu as Icon } from 'react-icons/ai'
 import { motion, Variants, Transition } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 import { mq } from '@/theme/theme'
+import useIsSsr from '../../hooks/useIsSsr'
 import NavLink from './NavLink'
 
 const MenuIcon = styled(Icon)<{ open: boolean }>(({ theme, open }) => ({
@@ -42,6 +43,7 @@ const MResponsiveMenu = styled(motion.div)(() =>
 const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const isBigScreen = useMediaQuery({ minWidth: breakpoint })
+  const isSsr = useIsSsr()
 
   useEffect(() => {
     setMenuOpen(isBigScreen)
@@ -94,18 +96,19 @@ const ResponsiveNav: React.FC<{ breakpoint: number }> = ({ breakpoint }) => {
           <MenuIcon open={menuOpen} onClick={handleMenuClick} />
         </motion.div>
       )}
-
-      <NavBox id="site nav" isBigScreen={isBigScreen}>
-        <NavLink motionProps={{ variants: item }} to="/">
-          Home
-        </NavLink>
-        <NavLink motionProps={{ variants: item }} to="/portfolio/">
-          Portfolio
-        </NavLink>
-        <NavLink motionProps={{ variants: item }} to="/contact/">
-          Contact
-        </NavLink>
-      </NavBox>
+      {!isSsr && (
+        <NavBox id="site nav" isBigScreen={isBigScreen}>
+          <NavLink motionProps={{ variants: item }} to="/">
+            Home
+          </NavLink>
+          <NavLink motionProps={{ variants: item }} to="/portfolio/">
+            Portfolio
+          </NavLink>
+          <NavLink motionProps={{ variants: item }} to="/contact/">
+            Contact
+          </NavLink>
+        </NavBox>
+      )}
     </MResponsiveMenu>
   )
 }

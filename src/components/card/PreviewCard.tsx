@@ -119,7 +119,7 @@ const PreviewCard: React.FC<Props> = ({
       <Body>{description}</Body>
       <Footer>
         {tags.map((tag) => (
-          <Tag>{tag}</Tag>
+          <Tag key={tag}>{tag}</Tag>
         ))}
       </Footer>
     </Card>

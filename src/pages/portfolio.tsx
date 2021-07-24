@@ -1,6 +1,11 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
-import { motion, useAnimation, Variants } from 'framer-motion'
+import {
+  motion,
+  useAnimation,
+  useViewportScroll,
+  Variants,
+} from 'framer-motion'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
 import PreviewCard from '../components/card/PreviewCard'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, MotionProps } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
-import {} from '../../theme/theme'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Card = styled(motion.div)(({ theme }) => ({
   display: 'flex',
@@ -22,7 +22,7 @@ const Header = styled.h2(({ theme }) => ({
   color: theme.colors.mostReadableText(theme.colors.primary),
 }))
 
-const Img = styled.img(() => ({
+const Img = styled(LazyLoadImage)(() => ({
   width: '100%',
 }))
 

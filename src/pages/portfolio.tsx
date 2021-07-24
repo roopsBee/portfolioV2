@@ -3,6 +3,7 @@ import { PageProps } from 'gatsby'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
 import PreviewCard from '../components/card/PreviewCard'
+import catLaptopVid from '../assets/vids/cat-laptop.mp4'
 
 const Container = styled.div(
   mq({
@@ -22,7 +23,8 @@ const mockProject = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores voluptates distinctio corrupti commodi facilis. Ullam, repellendus consequatur similique autem distinctio voluptas accusamus, rerum, magni commod ducimus est voluptatum tempora exercitationem?',
     tags: ['reactjs', 'typescript', 'javascript', 'redux', 'api'],
-    image: 'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif',
+    vid: catLaptopVid,
+    vidAriaLabel: 'cat on laptop',
     codeUrl: 'http://github.com',
     liveUrl: 'http://roopeshpatel.com',
   },
@@ -67,16 +69,16 @@ const Portfolio: React.FC<PageProps> = () => {
   return (
     <Container>
       {mockProject.map(
-        ({ codeUrl, description, image, liveUrl, tags, title }) => (
+        ({ codeUrl, description, vid, liveUrl, tags, title, vidAriaLabel }) => (
           <PreviewCard
             key={title}
             title={title}
-            image={image}
+            vid={vid}
             description={description}
             codeUrl={codeUrl}
             liveUrl={liveUrl}
             tags={tags}
-            imageAlt="cat"
+            vidAriaLabel={vidAriaLabel}
           />
         ),
       )}

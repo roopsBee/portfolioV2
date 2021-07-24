@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, MotionProps } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 const Card = styled(motion.div)(({ theme }) => ({
   display: 'flex',
@@ -22,7 +22,7 @@ const Header = styled.h2(({ theme }) => ({
   color: theme.colors.mostReadableText(theme.colors.primary),
 }))
 
-const Img = styled(LazyLoadImage)(() => ({
+const Vid = styled.video(() => ({
   width: '100%',
 }))
 
@@ -77,8 +77,8 @@ interface Props extends MotionProps {
   title: string
   description: string
   tags: string[]
-  image: string
-  imageAlt: string
+  vid: string
+  vidAriaLabel: string
   codeUrl: string
   liveUrl?: string
   css?: CSSObject
@@ -87,9 +87,9 @@ interface Props extends MotionProps {
 const PreviewCard: React.FC<Props> = ({
   title,
   description,
-  image,
+  vid,
   tags,
-  imageAlt,
+  vidAriaLabel,
   liveUrl,
   codeUrl,
   css,
@@ -105,7 +105,11 @@ const PreviewCard: React.FC<Props> = ({
       {...props}
     >
       <Header>{title}</Header>
-      <Img src={image} alt={imageAlt} />
+      <LazyLoadComponent>
+        <Vid controls loop muted playsInline aria-label={vidAriaLabel}>
+          <source src={vid} type="video/mp4" />
+        </Vid>
+      </LazyLoadComponent>
       <Nav>
         <Link href={codeUrl} target="_blank">
           Github

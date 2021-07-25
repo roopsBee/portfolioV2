@@ -79,6 +79,8 @@ interface Props extends MotionProps {
   tags: string[]
   vid: string
   vidAriaLabel: string
+  placeholderImage: string
+  placeholderAlt: string
   codeUrl: string
   liveUrl?: string
   css?: CSSObject
@@ -93,6 +95,8 @@ const PreviewCard: React.FC<Props> = ({
   liveUrl,
   codeUrl,
   css,
+  placeholderImage,
+  placeholderAlt,
   ...props
 }) => {
   return (
@@ -105,8 +109,12 @@ const PreviewCard: React.FC<Props> = ({
       {...props}
     >
       <Header>{title}</Header>
-      <LazyLoadComponent>
-        <Vid controls loop muted playsInline aria-label={vidAriaLabel}>
+      <LazyLoadComponent
+        placeholder={
+          <img width="100%" src={placeholderImage} alt={placeholderAlt} />
+        }
+      >
+        <Vid autoPlay loop muted playsInline aria-label={vidAriaLabel}>
           <source src={vid} type="video/mp4" />
         </Vid>
       </LazyLoadComponent>

@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
 import PreviewCard from '../components/card/PreviewCard'
 import catLaptopVid from '../assets/vids/cat-laptop.mp4'
+import catPlaceholder from '../assets/images/cat-laptop-blur.jpg'
+import smallcat from '../assets/vids/smallcat.mp4'
 
 const Container = styled.div(
   mq({
@@ -23,10 +25,12 @@ const mockProject = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores voluptates distinctio corrupti commodi facilis. Ullam, repellendus consequatur similique autem distinctio voluptas accusamus, rerum, magni commod ducimus est voluptatum tempora exercitationem?',
     tags: ['reactjs', 'typescript', 'javascript', 'redux', 'api'],
-    vid: catLaptopVid,
+    vid: smallcat,
     vidAriaLabel: 'cat on laptop',
     codeUrl: 'http://github.com',
     liveUrl: 'http://roopeshpatel.com',
+    placeholderImage: catPlaceholder,
+    placeholderAlt: 'cat on laptop',
   },
   {
     title: 'Mega Project',
@@ -36,6 +40,10 @@ const mockProject = [
     image: 'https://media.giphy.com/media/BzyTuYCmvSORqs1ABM/giphy.gif',
     codeUrl: 'http://github.com',
     liveUrl: 'http://roopeshpatel.com',
+    placeholderImage: catPlaceholder,
+    placeholderAlt: 'cat on laptop',
+    vid: smallcat,
+    vidAriaLabel: 'cat on laptop',
   },
   {
     title: 'Big Bad',
@@ -44,6 +52,10 @@ const mockProject = [
     image: 'https://media.giphy.com/media/cuPm4p4pClZVC/giphy.gif',
     codeUrl: 'http://github.com',
     liveUrl: 'http://roopeshpatel.com',
+    placeholderImage: catPlaceholder,
+    placeholderAlt: 'cat on laptop',
+    vid: smallcat,
+    vidAriaLabel: 'cat on laptop',
   },
   {
     title: 'Batman universal project',
@@ -53,6 +65,10 @@ const mockProject = [
     image: 'https://media.giphy.com/media/ilqOZH5iI98vxx3nt6/giphy.gif',
     codeUrl: 'http://github.com',
     liveUrl: 'http://roopeshpatel.com',
+    placeholderImage: catPlaceholder,
+    placeholderAlt: 'cat on laptop',
+    vid: catLaptopVid,
+    vidAriaLabel: 'cat on laptop',
   },
   {
     title: 'Project',
@@ -62,6 +78,10 @@ const mockProject = [
     image: 'https://media.giphy.com/media/Q94xQWspTUkShljj8P/giphy.gif',
     codeUrl: 'http://github.com',
     liveUrl: 'http://roopeshpatel.com',
+    placeholderImage: catPlaceholder,
+    placeholderAlt: 'cat on laptop',
+    vid: smallcat,
+    vidAriaLabel: 'cat on laptop',
   },
 ]
 
@@ -69,7 +89,17 @@ const Portfolio: React.FC<PageProps> = () => {
   return (
     <Container>
       {mockProject.map(
-        ({ codeUrl, description, vid, liveUrl, tags, title, vidAriaLabel }) => (
+        ({
+          codeUrl,
+          description,
+          vid,
+          liveUrl,
+          tags,
+          title,
+          vidAriaLabel,
+          placeholderAlt,
+          placeholderImage,
+        }) => (
           <PreviewCard
             key={title}
             title={title}
@@ -79,6 +109,8 @@ const Portfolio: React.FC<PageProps> = () => {
             liveUrl={liveUrl}
             tags={tags}
             vidAriaLabel={vidAriaLabel}
+            placeholderAlt={placeholderAlt}
+            placeholderImage={placeholderImage}
           />
         ),
       )}

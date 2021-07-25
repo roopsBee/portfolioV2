@@ -54,11 +54,18 @@ const Link = styled.a(({ theme }) => ({
   },
 }))
 
+const CardBottom = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  height: '100%',
+})
+
 const Body = styled.div(() => ({
   padding: '10px',
   fontWeight: 'bold',
 }))
-const Footer = styled.div(() => ({
+const TagBox = styled.div(() => ({
   display: 'flex',
   flexWrap: 'wrap',
   padding: '10px',
@@ -128,12 +135,14 @@ const PreviewCard: React.FC<Props> = ({
           </Link>
         )}
       </Nav>
-      <Body>{description}</Body>
-      <Footer>
-        {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </Footer>
+      <CardBottom>
+        <Body>{description}</Body>
+        <TagBox>
+          {tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </TagBox>
+      </CardBottom>
     </Card>
   )
 }

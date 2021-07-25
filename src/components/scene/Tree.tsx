@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation, Variants } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
+import { DynamicStyle } from 'facepaint'
 import { theme as thm } from '../../theme/theme'
 
 const Svg = styled(motion.svg)(() => ({
@@ -11,10 +12,10 @@ const Svg = styled(motion.svg)(() => ({
   transform: 'translate(-50%)',
 }))
 
-const Path = styled(motion.path)({})
+const Path = motion.path
 
 interface Props {
-  css?: CSSObject
+  css?: CSSObject | DynamicStyle[]
   animate: boolean
   delay?: number
 }

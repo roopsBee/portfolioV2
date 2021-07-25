@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
-import Cloud from './Cloud'
-import HillyBackGround from './HillyBackGround'
-import GrassBackground from './GrassBackground'
-import Trees from './Trees'
-import FrontEndDeveloper from './FrontEndDeveloper'
-import Name from './Name'
-import TypedText from './TypedText'
+import loadable from '@loadable/component'
+
+const Cloud = loadable(() => import('./Cloud'))
+const HillyBackGround = loadable(() => import('./HillyBackGround'))
+const GrassBackground = loadable(() => import('./GrassBackground'))
+const Trees = loadable(() => import('./Trees'))
+const FrontEndDeveloper = loadable(() => import('./FrontEndDeveloper'))
+const Name = loadable(() => import('./Name'))
+const TypedText = loadable(() => import('./TypedText'))
 
 const Container = styled(motion.div)({
   position: 'fixed',

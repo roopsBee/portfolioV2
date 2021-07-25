@@ -11,7 +11,7 @@ const Svg = styled(motion.svg)(() => ({
   transform: 'translate(-50%)',
 }))
 
-const Path = styled(motion.path)({})
+const Path = motion.path
 
 interface Props {
   css?: CSSObject

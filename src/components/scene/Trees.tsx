@@ -92,4 +92,4 @@ const Trees: React.FC<Props> = ({
   return <>{trees}</>
 }
 
-export default Trees
+export default React.memo(Trees)

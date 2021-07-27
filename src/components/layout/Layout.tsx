@@ -17,10 +17,17 @@ const Content = styled.main`
 
 const Layout: React.FC<PageProps> = ({ children, location }) => {
   const [isIndex, setIsIndex] = useState(true)
+  const [isHideName, setIsHideName] = useState(true)
+
+  const path = location.pathname
+  useEffect(() => {
+    if (path === '/') setIsIndex(true)
+    else setIsIndex(false)
+  }, [location])
 
   useEffect(() => {
-    if (location.pathname === '/') setIsIndex(true)
-    else setIsIndex(false)
+    if (path === '/portfolio/') setIsHideName(true)
+    else setIsHideName(false)
   }, [location])
 
   return (
@@ -38,7 +45,7 @@ const Layout: React.FC<PageProps> = ({ children, location }) => {
       />
       <Header />
       <Content>
-        <Scene skipTypedText={!isIndex} isHideName={!isIndex} />
+        <Scene skipTypedText={!isIndex} isHideName={isHideName} />
         {children}
       </Content>
     </>

@@ -1,20 +1,8 @@
 import React from 'react'
-import { motion, MotionProps } from 'framer-motion'
+import { MotionProps } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
-
-const Card = styled(motion.div)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  border: `1px solid ${theme.colors.borderColor}`,
-  borderRadius: '5px',
-  zIndex: 1000,
-  flex: '0 0',
-  flexBasis: '100%',
-  maxWidth: '375px',
-  backgroundColor: theme.colors.primary,
-  color: theme.colors.mostReadableText(theme.colors.primary),
-}))
+import Card from './Card'
 
 const Header = styled.h2(({ theme }) => ({
   textAlign: 'center',
@@ -107,14 +95,7 @@ const PreviewCard: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <Card
-      key={title}
-      animate={{ rotateY: 0, opacity: 1, transition: { duration: 0.5 } }}
-      initial={{ rotateY: 90, opacity: 0 }}
-      exit={{ opacity: 0, rotateY: -90, transition: { duration: 0.4 } }}
-      css={css}
-      {...props}
-    >
+    <Card css={css} {...props}>
       <Header>{title}</Header>
       <LazyLoadComponent
         placeholder={

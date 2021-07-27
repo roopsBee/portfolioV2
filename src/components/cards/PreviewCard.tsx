@@ -98,6 +98,7 @@ const PreviewCard: React.FC<Props> = ({
     <Card css={css} {...props}>
       <Header>{title}</Header>
       <LazyLoadComponent
+        threshold={500}
         placeholder={
           <img width="100%" src={placeholderImage} alt={placeholderAlt} />
         }

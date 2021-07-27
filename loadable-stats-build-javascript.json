@@ -1,0 +1,449 @@
+{
+  "hash": "93d12803521f1e6da774",
+  "publicPath": "/",
+  "outputPath": "C:\\Users\\Roops\\Desktop\\code\\portfolioV2",
+  "assetsByChunkName": {
+    "polyfill": [
+      "polyfill.js",
+      "polyfill.57ec0018f8d377027d65.hot-update.js"
+    ],
+    "commons": [
+      "commons.css",
+      "commons.js",
+      "commons.57ec0018f8d377027d65.hot-update.js"
+    ],
+    "scene-Scene": [
+      "scene-Scene.js"
+    ],
+    "component---cache-dev-404-page-js": [
+      "component---cache-dev-404-page-js.js"
+    ],
+    "component---src-pages-404-tsx": [
+      "component---src-pages-404-tsx.js"
+    ],
+    "component---src-pages-contact-tsx": [
+      "component---src-pages-contact-tsx.js",
+      "component---src-pages-contact-tsx.57ec0018f8d377027d65.hot-update.js"
+    ],
+    "component---src-pages-index-tsx": [
+      "component---src-pages-index-tsx.js"
+    ],
+    "component---src-pages-portfolio-tsx": [
+      "component---src-pages-portfolio-tsx.js"
+    ],
+    "Cloud": [
+      "Cloud.js"
+    ],
+    "HillyBackGround": [
+      "HillyBackGround.js"
+    ],
+    "GrassBackground": [
+      "GrassBackground.js"
+    ],
+    "Trees": [
+      "Trees.js"
+    ],
+    "FrontEndDeveloper": [
+      "FrontEndDeveloper.js"
+    ],
+    "Name": [
+      "Name.js"
+    ],
+    "TypedText": [
+      "TypedText.js"
+    ],
+    "framework": [
+      "framework.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "assets by status",
+      "cached": true,
+      "filteredChildren": 30,
+      "size": 14923652
+    }
+  ],
+  "namedChunkGroups": {
+    "polyfill": {
+      "name": "polyfill",
+      "chunks": [
+        "polyfill"
+      ],
+      "assets": [
+        {
+          "name": "polyfill.js"
+        },
+        {
+          "name": "polyfill.57ec0018f8d377027d65.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "commons": {
+      "name": "commons",
+      "chunks": [
+        "framework",
+        "commons"
+      ],
+      "assets": [
+        {
+          "name": "framework.js"
+        },
+        {
+          "name": "commons.css"
+        },
+        {
+          "name": "commons.js"
+        },
+        {
+          "name": "commons.57ec0018f8d377027d65.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 5,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "scene-Scene": {
+      "name": "scene-Scene",
+      "chunks": [
+        "scene-Scene"
+      ],
+      "assets": [
+        {
+          "name": "scene-Scene.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---cache-dev-404-page-js": {
+      "name": "component---cache-dev-404-page-js",
+      "chunks": [
+        "component---cache-dev-404-page-js"
+      ],
+      "assets": [
+        {
+          "name": "component---cache-dev-404-page-js.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-404-tsx": {
+      "name": "component---src-pages-404-tsx",
+      "chunks": [
+        "component---src-pages-404-tsx"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-404-tsx.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-contact-tsx": {
+      "name": "component---src-pages-contact-tsx",
+      "chunks": [
+        "component---src-pages-contact-tsx"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-contact-tsx.js"
+        },
+        {
+          "name": "component---src-pages-contact-tsx.57ec0018f8d377027d65.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-index-tsx": {
+      "name": "component---src-pages-index-tsx",
+      "chunks": [
+        "component---src-pages-index-tsx"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-index-tsx.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-portfolio-tsx": {
+      "name": "component---src-pages-portfolio-tsx",
+      "chunks": [
+        "component---src-pages-portfolio-tsx"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-portfolio-tsx.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 2,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "Cloud": {
+      "name": "Cloud",
+      "chunks": [
+        "Cloud"
+      ],
+      "assets": [
+        {
+          "name": "Cloud.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "HillyBackGround": {
+      "name": "HillyBackGround",
+      "chunks": [
+        "HillyBackGround"
+      ],
+      "assets": [
+        {
+          "name": "HillyBackGround.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "GrassBackground": {
+      "name": "GrassBackground",
+      "chunks": [
+        "GrassBackground"
+      ],
+      "assets": [
+        {
+          "name": "GrassBackground.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "Trees": {
+      "name": "Trees",
+      "chunks": [
+        "Trees"
+      ],
+      "assets": [
+        {
+          "name": "Trees.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "FrontEndDeveloper": {
+      "name": "FrontEndDeveloper",
+      "chunks": [
+        "FrontEndDeveloper"
+      ],
+      "assets": [
+        {
+          "name": "FrontEndDeveloper.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "Name": {
+      "name": "Name",
+      "chunks": [
+        "Name"
+      ],
+      "assets": [
+        {
+          "name": "Name.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "TypedText": {
+      "name": "TypedText",
+      "chunks": [
+        "TypedText"
+      ],
+      "assets": [
+        {
+          "name": "TypedText.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "polyfill",
+      "files": [
+        "polyfill.js",
+        "polyfill.57ec0018f8d377027d65.hot-update.js"
+      ]
+    },
+    {
+      "id": "commons",
+      "files": [
+        "commons.css",
+        "commons.js",
+        "commons.57ec0018f8d377027d65.hot-update.js"
+      ]
+    },
+    {
+      "id": "_cache_dummy_js",
+      "files": [
+        "_cache_dummy_js.js"
+      ]
+    },
+    {
+      "id": "scene-Scene",
+      "files": [
+        "scene-Scene.js"
+      ]
+    },
+    {
+      "id": "component---cache-dev-404-page-js",
+      "files": [
+        "component---cache-dev-404-page-js.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-404-tsx",
+      "files": [
+        "component---src-pages-404-tsx.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-contact-tsx",
+      "files": [
+        "component---src-pages-contact-tsx.js",
+        "component---src-pages-contact-tsx.57ec0018f8d377027d65.hot-update.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-index-tsx",
+      "files": [
+        "component---src-pages-index-tsx.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-portfolio-tsx",
+      "files": [
+        "component---src-pages-portfolio-tsx.js"
+      ]
+    },
+    {
+      "id": "Cloud",
+      "files": [
+        "Cloud.js"
+      ]
+    },
+    {
+      "id": "HillyBackGround",
+      "files": [
+        "HillyBackGround.js"
+      ]
+    },
+    {
+      "id": "GrassBackground",
+      "files": [
+        "GrassBackground.js"
+      ]
+    },
+    {
+      "id": "Trees",
+      "files": [
+        "Trees.js"
+      ]
+    },
+    {
+      "id": "FrontEndDeveloper",
+      "files": [
+        "FrontEndDeveloper.js"
+      ]
+    },
+    {
+      "id": "Name",
+      "files": [
+        "Name.js"
+      ]
+    },
+    {
+      "id": "TypedText",
+      "files": [
+        "TypedText.js"
+      ]
+    },
+    {
+      "id": "framework",
+      "files": [
+        "framework.js"
+      ]
+    }
+  ]
+}

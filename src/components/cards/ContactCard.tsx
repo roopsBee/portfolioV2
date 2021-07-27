@@ -51,7 +51,7 @@ const ContactCard: React.FC = () => {
       <Body>
         Currently looking for new opportunities and would love to have a chat.
       </Body>
-      <Body>Get in touch!</Body>
+      <Body css={{ paddingTop: '0px' }}>Get in touch!</Body>
       <ButtonGroup>
         <Link css={{ fontSize: '16px' }} href="mailto:hi@roopeshpatel.com">
           <Icon>

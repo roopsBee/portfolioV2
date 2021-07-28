@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  repo: donroops/myPortfolioV2
+  branch: main
+
+media_folder: static/media
+public_folder: /media
+
+collections:
+  - name: Project
+    label: Project
+    folder: cms/projects
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Full Description, widget: 'markdown' }
+      - { name: url, label: Live URL }
+      - { name: codeUrl, label: Code URL }
+      - {
+          name: tech,
+          label: Tech List,
+          widget: 'list',
+          hint: 'Comma seperated list',
+        }
+      - { label: 'Vid', name: 'Vid', widget: 'file' }
+      - { label: Vid Alt, name: alt, widget: string }
+      - { label: Placeholder Image, name: placeholder, widget: image }
+      - { label: Placeholder Image alt, name: placeholderAlt, widget: string }

@@ -1,11 +1,12 @@
 import React from 'react'
-import { PageProps } from 'gatsby'
+import { graphql, PageProps, useStaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 import { mq } from '@/theme/theme'
 import PreviewCard from '../components/cards/PreviewCard'
 import catLaptopVid from '../assets/vids/cat-laptop.mp4'
 import catPlaceholder from '../assets/images/cat-laptop-blur.jpg'
 import smallcat from '../assets/vids/smallcat.mp4'
+import { GetProjectsQuery } from '../../graphql-types'
 
 const Container = styled.div(
   mq({
@@ -86,6 +87,30 @@ const mockProject = [
 ]
 
 const Portfolio: React.FC<PageProps> = () => {
+  const data: GetProjectsQuery = useStaticQuery(graphql`
+    query GetProjects {
+      allFile {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                Vid
+                placeholder
+                alt
+                codeUrl
+                placeholderAlt
+                tech
+                title
+                url
+              }
+              html
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Container>
       {mockProject.map(

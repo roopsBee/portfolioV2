@@ -1,16 +1,16 @@
 {
-  "hash": "08ea4cc82a27b24fc112",
+  "hash": "ea57984ec89d7976b7b7",
   "publicPath": "/",
   "outputPath": "C:\\Users\\Roops\\Desktop\\code\\portfolioV2",
   "assetsByChunkName": {
     "polyfill": [
       "polyfill.js",
-      "polyfill.93d12803521f1e6da774.hot-update.js"
+      "polyfill.9ce0b49175be232c1f74.hot-update.js"
     ],
     "commons": [
       "commons.css",
       "commons.js",
-      "commons.93d12803521f1e6da774.hot-update.js"
+      "commons.9ce0b49175be232c1f74.hot-update.js"
     ],
     "scene-Scene": [
       "scene-Scene.js"
@@ -28,7 +28,8 @@
       "component---src-pages-index-tsx.js"
     ],
     "component---src-pages-portfolio-tsx": [
-      "component---src-pages-portfolio-tsx.js"
+      "component---src-pages-portfolio-tsx.js",
+      "component---src-pages-portfolio-tsx.9ce0b49175be232c1f74.hot-update.js"
     ],
     "Cloud": [
       "Cloud.js"
@@ -59,8 +60,8 @@
     {
       "type": "assets by status",
       "cached": true,
-      "filteredChildren": 29,
-      "size": 14862352
+      "filteredChildren": 30,
+      "size": 15448866
     }
   ],
   "namedChunkGroups": {
@@ -74,7 +75,7 @@
           "name": "polyfill.js"
         },
         {
-          "name": "polyfill.93d12803521f1e6da774.hot-update.js"
+          "name": "polyfill.9ce0b49175be232c1f74.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -101,7 +102,7 @@
           "name": "commons.js"
         },
         {
-          "name": "commons.93d12803521f1e6da774.hot-update.js"
+          "name": "commons.9ce0b49175be232c1f74.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -204,6 +205,9 @@
       "assets": [
         {
           "name": "component---src-pages-portfolio-tsx.js"
+        },
+        {
+          "name": "component---src-pages-portfolio-tsx.9ce0b49175be232c1f74.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -339,7 +343,7 @@
       "id": "polyfill",
       "files": [
         "polyfill.js",
-        "polyfill.93d12803521f1e6da774.hot-update.js"
+        "polyfill.9ce0b49175be232c1f74.hot-update.js"
       ]
     },
     {
@@ -347,7 +351,7 @@
       "files": [
         "commons.css",
         "commons.js",
-        "commons.93d12803521f1e6da774.hot-update.js"
+        "commons.9ce0b49175be232c1f74.hot-update.js"
       ]
     },
     {
@@ -389,7 +393,8 @@
     {
       "id": "component---src-pages-portfolio-tsx",
       "files": [
-        "component---src-pages-portfolio-tsx.js"
+        "component---src-pages-portfolio-tsx.js",
+        "component---src-pages-portfolio-tsx.9ce0b49175be232c1f74.hot-update.js"
       ]
     },
     {

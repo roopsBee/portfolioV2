@@ -14,5 +14,4 @@ vidPoster: /media/cat-laptop-blur.jpg
 placeholder: /media/cat-laptop-blur.jpg
 placeholderAlt: cat on laptop
 ---
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe temporibus qui quia blanditiis non ducimus autem assumenda repellendus consequatur, in neque voluptate, quaerat rerum? Deserunt ad laudantium eum qui.
+Hello this is catto catto catto man. The most catto of them all. Hello this is catto catto catto man. The most catto of them all. Hello this is catto catto catto man. The most catto of them all. Hello this is catto catto catto man. The most catto of them all. Hello this is catto catto catto man. The most catto of them all.

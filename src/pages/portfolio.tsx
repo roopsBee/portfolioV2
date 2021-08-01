@@ -33,6 +33,7 @@ const Portfolio: React.FC<PageProps> = () => {
                 tech
                 title
                 url
+                vidPoster
               }
               html
             }
@@ -45,8 +46,17 @@ const Portfolio: React.FC<PageProps> = () => {
   const projectEdges = data.allFile.edges
 
   const projects = projectEdges.map(({ node }) => {
-    const { Vid, placeholderAlt, alt, codeUrl, placeholder, tech, title, url } =
-      node.childMarkdownRemark.frontmatter
+    const {
+      Vid,
+      placeholderAlt,
+      alt,
+      codeUrl,
+      placeholder,
+      tech,
+      title,
+      url,
+      vidPoster,
+    } = node.childMarkdownRemark.frontmatter
 
     const { html } = node.childMarkdownRemark
 
@@ -55,6 +65,7 @@ const Portfolio: React.FC<PageProps> = () => {
         key={title}
         title={title}
         vid={Vid}
+        vidPoster={vidPoster}
         descriptionHTML={html}
         codeUrl={codeUrl}
         liveUrl={url}

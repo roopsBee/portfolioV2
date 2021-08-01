@@ -387,6 +387,7 @@ export type MarkdownRemarkFrontmatter = {
   alt?: Maybe<Scalars['String']>;
   placeholder?: Maybe<Scalars['String']>;
   placeholderAlt?: Maybe<Scalars['String']>;
+  vidPoster?: Maybe<Scalars['String']>;
 };
 
 
@@ -793,6 +794,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   alt?: Maybe<StringQueryOperatorInput>;
   placeholder?: Maybe<StringQueryOperatorInput>;
   placeholderAlt?: Maybe<StringQueryOperatorInput>;
+  vidPoster?: Maybe<StringQueryOperatorInput>;
 };
 
 export type JsonQueryOperatorInput = {
@@ -949,6 +951,7 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___alt'
   | 'childrenMarkdownRemark___frontmatter___placeholder'
   | 'childrenMarkdownRemark___frontmatter___placeholderAlt'
+  | 'childrenMarkdownRemark___frontmatter___vidPoster'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1010,6 +1013,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___alt'
   | 'childMarkdownRemark___frontmatter___placeholder'
   | 'childMarkdownRemark___frontmatter___placeholderAlt'
+  | 'childMarkdownRemark___frontmatter___vidPoster'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -2136,6 +2140,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___alt'
   | 'frontmatter___placeholder'
   | 'frontmatter___placeholderAlt'
+  | 'frontmatter___vidPoster'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -2592,5 +2597,5 @@ export type GetProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetProjectsQuery = { allFile: { edges: Array<{ node: { childMarkdownRemark?: Maybe<(
           Pick<MarkdownRemark, 'html'>
-          & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'Vid' | 'placeholder' | 'alt' | 'codeUrl' | 'placeholderAlt' | 'tech' | 'title' | 'url'>> }
+          & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'Vid' | 'placeholder' | 'alt' | 'codeUrl' | 'placeholderAlt' | 'tech' | 'title' | 'url' | 'vidPoster'>> }
         )> } }> } };

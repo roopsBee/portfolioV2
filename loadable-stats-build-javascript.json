@@ -1,16 +1,16 @@
 {
-  "hash": "c7074799f5948bf080a3",
+  "hash": "d798a1c8b4327d636297",
   "publicPath": "/",
   "outputPath": "C:\\Users\\Roops\\Desktop\\code\\portfolioV2",
   "assetsByChunkName": {
     "polyfill": [
       "polyfill.js",
-      "polyfill.0b04ec2d1d90005728bd.hot-update.js"
+      "polyfill.3970d9bd11a9dc920c17.hot-update.js"
     ],
     "commons": [
       "commons.css",
       "commons.js",
-      "commons.0b04ec2d1d90005728bd.hot-update.js"
+      "commons.3970d9bd11a9dc920c17.hot-update.js"
     ],
     "scene-Scene": [
       "scene-Scene.js"
@@ -29,7 +29,7 @@
     ],
     "component---src-pages-portfolio-tsx": [
       "component---src-pages-portfolio-tsx.js",
-      "component---src-pages-portfolio-tsx.0b04ec2d1d90005728bd.hot-update.js"
+      "component---src-pages-portfolio-tsx.3970d9bd11a9dc920c17.hot-update.js"
     ],
     "Cloud": [
       "Cloud.js"
@@ -61,7 +61,7 @@
       "type": "assets by status",
       "cached": true,
       "filteredChildren": 28,
-      "size": 14852186
+      "size": 14800603
     }
   ],
   "namedChunkGroups": {
@@ -75,7 +75,7 @@
           "name": "polyfill.js"
         },
         {
-          "name": "polyfill.0b04ec2d1d90005728bd.hot-update.js"
+          "name": "polyfill.3970d9bd11a9dc920c17.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -102,7 +102,7 @@
           "name": "commons.js"
         },
         {
-          "name": "commons.0b04ec2d1d90005728bd.hot-update.js"
+          "name": "commons.3970d9bd11a9dc920c17.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -207,7 +207,7 @@
           "name": "component---src-pages-portfolio-tsx.js"
         },
         {
-          "name": "component---src-pages-portfolio-tsx.0b04ec2d1d90005728bd.hot-update.js"
+          "name": "component---src-pages-portfolio-tsx.3970d9bd11a9dc920c17.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -343,7 +343,7 @@
       "id": "polyfill",
       "files": [
         "polyfill.js",
-        "polyfill.0b04ec2d1d90005728bd.hot-update.js"
+        "polyfill.3970d9bd11a9dc920c17.hot-update.js"
       ]
     },
     {
@@ -351,7 +351,7 @@
       "files": [
         "commons.css",
         "commons.js",
-        "commons.0b04ec2d1d90005728bd.hot-update.js"
+        "commons.3970d9bd11a9dc920c17.hot-update.js"
       ]
     },
     {
@@ -394,7 +394,7 @@
       "id": "component---src-pages-portfolio-tsx",
       "files": [
         "component---src-pages-portfolio-tsx.js",
-        "component---src-pages-portfolio-tsx.0b04ec2d1d90005728bd.hot-update.js"
+        "component---src-pages-portfolio-tsx.3970d9bd11a9dc920c17.hot-update.js"
       ]
     },
     {

@@ -13,4 +13,5 @@ alt: Cat on laptop
 placeholder: /media/cat-laptop-blur.jpg
 placeholderAlt: cat on laptop
 ---
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores voluptates distinctio corrupti commodi facilis. Ullam, repellendus consequatur similique autem distinctio voluptas accusamus, rerum, magni commod ducimus est voluptatum tempora exercitationem?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ullam esse repudiandae neque dicta quibusdam, culpa ut officia consequuntur libero vero porro mollitia at provident obcaecati quam ducimus illo pariatur, a non alias aspernatur. Debitis corrupti dicta enim! Architecto amet unde molestiae corporis aliquid quod voluptas veniam et, eligendi optio!

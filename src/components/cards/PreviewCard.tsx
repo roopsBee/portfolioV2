@@ -1,7 +1,7 @@
 import React from 'react'
 import { MotionProps } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
-import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import LazyLoad from 'react-lazyload'
 import Card from './Card'
 
 const Header = styled.h2(({ theme }) => ({
@@ -52,6 +52,7 @@ const CardBottom = styled.div({
 const Body = styled.div(() => ({
   padding: '10px',
   fontWeight: 'bold',
+  overflowWrap: 'break-word',
 }))
 const TagBox = styled.div(() => ({
   display: 'flex',
@@ -68,9 +69,14 @@ const Tag = styled.div(({ theme }) => ({
   fontWeight: 'bold',
 }))
 
+const Img = styled.img(() => ({
+  width: '300px',
+  height: '300px',
+}))
+
 interface Props extends MotionProps {
   title: string
-  description: string
+  descriptionHTML: string
   tags: string[]
   vid: string
   vidAriaLabel: string
@@ -78,12 +84,13 @@ interface Props extends MotionProps {
   placeholderAlt: string
   codeUrl: string
   liveUrl?: string
+  vidPoster: string
   css?: CSSObject
 }
 
 const PreviewCard: React.FC<Props> = ({
   title,
-  description,
+  descriptionHTML,
   vid,
   tags,
   vidAriaLabel,
@@ -91,22 +98,25 @@ const PreviewCard: React.FC<Props> = ({
   codeUrl,
   css,
   placeholderImage,
+  vidPoster,
   placeholderAlt,
   ...props
 }) => {
   return (
     <Card css={css} {...props}>
       <Header>{title}</Header>
-      <LazyLoadComponent
-        threshold={500}
-        placeholder={
-          <img width="100%" src={placeholderImage} alt={placeholderAlt} />
-        }
-      >
-        <Vid autoPlay loop muted playsInline aria-label={vidAriaLabel}>
-          <source src={vid} type="video/mp4" />
-        </Vid>
-      </LazyLoadComponent>
+      <LazyLoad component={<Img src={placeholderImage} alt={placeholderAlt} />}>
+        <Vid
+          poster={vidPoster}
+          preload="none"
+          controls
+          loop
+          muted
+          playsInline
+          aria-label={vidAriaLabel}
+          src={vid}
+        />
+      </LazyLoad>
       <Nav>
         <Link href={codeUrl} target="_blank">
           Github
@@ -118,7 +128,7 @@ const PreviewCard: React.FC<Props> = ({
         )}
       </Nav>
       <CardBottom>
-        <Body>{description}</Body>
+        <Body dangerouslySetInnerHTML={{ __html: descriptionHTML }} />
         <TagBox>
           {tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>

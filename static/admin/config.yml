@@ -24,5 +24,6 @@ collections:
         }
       - { label: 'Vid', name: 'Vid', widget: 'file' }
       - { label: Vid Alt, name: alt, widget: string }
+      - { label: Vid Poster, name: vidPoster, widget: image }
       - { label: Placeholder Image, name: placeholder, widget: image }
       - { label: Placeholder Image alt, name: placeholderAlt, widget: string }

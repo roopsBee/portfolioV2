@@ -23,7 +23,7 @@ const Card: React.FC<Props> = ({ children, css, ...props }) => {
   return (
     <Container
       animate={{ rotateY: 0, opacity: 1, transition: { duration: 0.3 } }}
-      initial={{ rotateY: 90, opacity: 0 }}
+      initial={{ rotateY: 0, opacity: 0 }}
       exit={{ opacity: 0, rotateY: -90, transition: { duration: 0.3 } }}
       css={css}
       {...props}

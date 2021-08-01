@@ -14,7 +14,7 @@ module.exports = {
     `gatsby-plugin-graphql-codegen`,
   ],
   flags: {
-    FAST_DEV: true,
+    // FAST_DEV: true,
     // FAST_REFRESH: true,
   },
 }

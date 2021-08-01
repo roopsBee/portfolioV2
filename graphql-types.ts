@@ -256,7 +256,8 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  flags?: Maybe<SiteFlags>;
+  polyfill?: Maybe<Scalars['Boolean']>;
+  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -269,10 +270,6 @@ export type SiteBuildTimeArgs = {
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
-};
-
-export type SiteFlags = {
-  FAST_DEV?: Maybe<Scalars['Boolean']>;
 };
 
 export type SiteSiteMetadata = {
@@ -385,9 +382,9 @@ export type MarkdownRemarkFrontmatter = {
   tech?: Maybe<Array<Maybe<Scalars['String']>>>;
   Vid?: Maybe<Scalars['String']>;
   alt?: Maybe<Scalars['String']>;
+  vidPoster?: Maybe<Scalars['String']>;
   placeholder?: Maybe<Scalars['String']>;
   placeholderAlt?: Maybe<Scalars['String']>;
-  vidPoster?: Maybe<Scalars['String']>;
 };
 
 
@@ -590,7 +587,8 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  flags?: Maybe<SiteFlagsFilterInput>;
+  polyfill?: Maybe<BooleanQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -792,9 +790,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   tech?: Maybe<StringQueryOperatorInput>;
   Vid?: Maybe<StringQueryOperatorInput>;
   alt?: Maybe<StringQueryOperatorInput>;
+  vidPoster?: Maybe<StringQueryOperatorInput>;
   placeholder?: Maybe<StringQueryOperatorInput>;
   placeholderAlt?: Maybe<StringQueryOperatorInput>;
-  vidPoster?: Maybe<StringQueryOperatorInput>;
 };
 
 export type JsonQueryOperatorInput = {
@@ -949,9 +947,9 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___tech'
   | 'childrenMarkdownRemark___frontmatter___Vid'
   | 'childrenMarkdownRemark___frontmatter___alt'
+  | 'childrenMarkdownRemark___frontmatter___vidPoster'
   | 'childrenMarkdownRemark___frontmatter___placeholder'
   | 'childrenMarkdownRemark___frontmatter___placeholderAlt'
-  | 'childrenMarkdownRemark___frontmatter___vidPoster'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1011,9 +1009,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___tech'
   | 'childMarkdownRemark___frontmatter___Vid'
   | 'childMarkdownRemark___frontmatter___alt'
+  | 'childMarkdownRemark___frontmatter___vidPoster'
   | 'childMarkdownRemark___frontmatter___placeholder'
   | 'childMarkdownRemark___frontmatter___placeholderAlt'
-  | 'childMarkdownRemark___frontmatter___vidPoster'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1439,10 +1437,6 @@ export type SiteSiteMetadataFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SiteFlagsFilterInput = {
-  FAST_DEV?: Maybe<BooleanQueryOperatorInput>;
-};
-
 export type SiteConnection = {
   totalCount: Scalars['Int'];
   edges: Array<SiteEdge>;
@@ -1494,7 +1488,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___description'
   | 'port'
   | 'host'
-  | 'flags___FAST_DEV'
+  | 'polyfill'
+  | 'pathPrefix'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -1596,7 +1591,8 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  flags?: Maybe<SiteFlagsFilterInput>;
+  polyfill?: Maybe<BooleanQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2138,9 +2134,9 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___tech'
   | 'frontmatter___Vid'
   | 'frontmatter___alt'
+  | 'frontmatter___vidPoster'
   | 'frontmatter___placeholder'
   | 'frontmatter___placeholderAlt'
-  | 'frontmatter___vidPoster'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'

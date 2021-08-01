@@ -10,8 +10,17 @@ const Header = styled.h2(({ theme }) => ({
   color: theme.colors.mostReadableText(theme.colors.primary),
 }))
 
+const VidWrapper = styled.div({
+  position: 'relative',
+  width: '100%',
+  paddingTop: '100%',
+})
+
 const Vid = styled.video(() => ({
   width: '100%',
+  position: 'absolute',
+  left: 0,
+  top: 0,
 }))
 
 const Nav = styled.nav(() => ({
@@ -70,8 +79,8 @@ const Tag = styled.div(({ theme }) => ({
 }))
 
 const Img = styled.img(() => ({
-  width: '300px',
-  height: '300px',
+  width: '100%',
+  height: 'auto',
 }))
 
 interface Props extends MotionProps {
@@ -105,18 +114,22 @@ const PreviewCard: React.FC<Props> = ({
   return (
     <Card css={css} {...props}>
       <Header>{title}</Header>
-      <LazyLoad component={<Img src={placeholderImage} alt={placeholderAlt} />}>
-        <Vid
-          poster={vidPoster}
-          preload="none"
-          controls
-          loop
-          muted
-          playsInline
-          aria-label={vidAriaLabel}
-          src={vid}
-        />
-      </LazyLoad>
+      <VidWrapper>
+        <LazyLoad
+          component={<Img src={placeholderImage} alt={placeholderAlt} />}
+        >
+          <Vid
+            poster={vidPoster}
+            preload="none"
+            controls
+            loop
+            muted
+            playsInline
+            aria-label={vidAriaLabel}
+            src={vid}
+          />
+        </LazyLoad>
+      </VidWrapper>
       <Nav>
         <Link href={codeUrl} target="_blank">
           Github
@@ -129,6 +142,7 @@ const PreviewCard: React.FC<Props> = ({
       </Nav>
       <CardBottom>
         <Body dangerouslySetInnerHTML={{ __html: descriptionHTML }} />
+
         <TagBox>
           {tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>

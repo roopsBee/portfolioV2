@@ -1,5 +1,5 @@
-import React from 'react'
-import { MotionProps } from 'framer-motion'
+import React, { useEffect, useState, useRef, useCallback } from 'react'
+import { motion, MotionProps } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
 import LazyLoad from 'react-lazyload'
 import Card from './Card'
@@ -16,7 +16,7 @@ const VidWrapper = styled.div({
   paddingTop: '100%',
 })
 
-const Vid = styled.video(() => ({
+const Vid = styled(motion.video)(() => ({
   width: '100%',
   position: 'absolute',
   left: 0,
@@ -93,7 +93,7 @@ interface Props extends MotionProps {
   placeholderAlt: string
   codeUrl: string
   liveUrl?: string
-  vidPoster: string
+  vidPoster?: string
   css?: CSSObject
 }
 
@@ -111,21 +111,28 @@ const PreviewCard: React.FC<Props> = ({
   placeholderAlt,
   ...props
 }) => {
+  const [vidReady, setVidReady] = useState(false)
+
   return (
     <Card css={css} {...props}>
       <Header>{title}</Header>
-      <VidWrapper>
+      <VidWrapper css={{ backgroundImage: `url(${placeholderImage})` }}>
         <LazyLoad
           component={<Img src={placeholderImage} alt={placeholderAlt} />}
         >
           <Vid
+            initial={{ opacity: 0 }}
+            animate={{ opacity: vidReady ? 1 : 0 }}
             poster={vidPoster}
-            preload="none"
+            preload="auto"
             controls
             loop
             muted
             playsInline
             aria-label={vidAriaLabel}
+            onCanPlay={() => {
+              setVidReady(true)
+            }}
             src={vid}
           />
         </LazyLoad>

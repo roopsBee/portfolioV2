@@ -26,6 +26,17 @@ collections:
         }
       - { label: 'Vid', name: 'Vid', widget: 'file' }
       - { label: Vid Alt, name: alt, widget: string }
-      - { label: Vid Poster, name: vidPoster, widget: image }
-      - { label: Placeholder Image, name: placeholder, widget: image }
+      - {
+          label: Vid Poster,
+          name: vidPoster,
+          widget: image,
+          required: false,
+          hint: 'The picture the video initially loads with',
+        }
+      - {
+          label: Placeholder Image,
+          name: placeholder,
+          widget: image,
+          hint: 'Low quality blured image of first frame of vid/poster. Will show before video is loaded.',
+        }
       - { label: Placeholder Image alt, name: placeholderAlt, widget: string }

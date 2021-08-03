@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react'
+import React, { useState } from 'react'
 import { motion, MotionProps } from 'framer-motion'
 import styled, { CSSObject } from '@emotion/styled'
 import LazyLoad from 'react-lazyload'

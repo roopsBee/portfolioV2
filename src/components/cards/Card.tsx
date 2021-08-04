@@ -11,6 +11,7 @@ const Container = styled(motion.div)(({ theme }) => ({
   flex: '0 0',
   flexBasis: '100%',
   maxWidth: '375px',
+  height: 'fit-content',
   backgroundColor: theme.colors.primary,
   color: theme.colors.mostReadableText(theme.colors.primary),
 }))

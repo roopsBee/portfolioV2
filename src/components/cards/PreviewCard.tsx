@@ -13,7 +13,9 @@ const Header = styled.h2(({ theme }) => ({
 const VidWrapper = styled.div({
   position: 'relative',
   width: '100%',
-  paddingTop: '100%',
+  paddingTop: '66.6%',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
 })
 
 const Vid = styled(motion.video)(() => ({

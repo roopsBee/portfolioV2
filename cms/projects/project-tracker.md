@@ -8,7 +8,7 @@ tech:
   - Gatsby
   - Javascript
   - Typerscript
-  - Emotion
+  - Material-UI
 Vid: /media/projecttrackervid.mp4
 alt: project tracker in use
 vidPoster: /media/projecttrackerposter.jpg

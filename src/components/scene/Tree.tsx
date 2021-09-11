@@ -28,13 +28,10 @@ const Tree: React.FC<Props> = ({ delay = 0, animate, ...props }) => {
     const animation = async () => {
       await svgControls.start('show')
       await pathControls.start(({ fill, item }) => ({
-        strokeWidth: 0.5,
-        pathLength: 1,
         opacity: 1,
         fill: `${fill}00`,
         stroke: thm.colors['dark-text'],
         transition: {
-          delay: item * 0.2,
           duration: 1,
           ease: 'easeOut',
         },
@@ -65,7 +62,7 @@ const Tree: React.FC<Props> = ({ delay = 0, animate, ...props }) => {
   }
 
   const pathVariant: Variants = {
-    initial: { pathLength: 0, opacity: 0, strokeWidth: 1, fill: '#00ff0000' },
+    initial: { pathLength: 1, opacity: 0, strokeWidth: 0.5, fill: '#00ff0000' },
   }
 
   return (

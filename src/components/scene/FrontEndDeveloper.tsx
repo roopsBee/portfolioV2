@@ -68,7 +68,7 @@ const FrontEndDeveloper: React.FC<Props> = ({
     fill: {
       borderColor: thm.colors.secondary,
       backgroundColor: thm.colors.primary,
-      transition: { delay: 2, duration: 1 },
+      transition: { delay: 1, duration: 1 },
       boxShadow: `1px 1px 3px 1px ${thm.colors.shadow}`,
     },
   }

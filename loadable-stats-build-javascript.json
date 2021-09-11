@@ -1,14 +1,16 @@
 {
-  "hash": "4498584eabfb3aba8cce",
+  "hash": "18110c3e36f446599ce3",
   "publicPath": "/",
   "outputPath": "C:\\Users\\Roops\\Desktop\\code\\portfolioV2",
   "assetsByChunkName": {
     "polyfill": [
-      "polyfill.js"
+      "polyfill.js",
+      "polyfill.ecbf6b27664286a807df.hot-update.js"
     ],
     "commons": [
       "commons.css",
-      "commons.js"
+      "commons.js",
+      "commons.ecbf6b27664286a807df.hot-update.js"
     ],
     "scene-Scene": [
       "scene-Scene.js"
@@ -41,7 +43,8 @@
       "Trees.js"
     ],
     "FrontEndDeveloper": [
-      "FrontEndDeveloper.js"
+      "FrontEndDeveloper.js",
+      "FrontEndDeveloper.ecbf6b27664286a807df.hot-update.js"
     ],
     "Name": [
       "Name.js"
@@ -57,8 +60,8 @@
     {
       "type": "assets by status",
       "cached": true,
-      "filteredChildren": 23,
-      "size": 14811930
+      "filteredChildren": 28,
+      "size": 14895699
     }
   ],
   "namedChunkGroups": {
@@ -70,6 +73,9 @@
       "assets": [
         {
           "name": "polyfill.js"
+        },
+        {
+          "name": "polyfill.ecbf6b27664286a807df.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -94,6 +100,9 @@
         },
         {
           "name": "commons.js"
+        },
+        {
+          "name": "commons.ecbf6b27664286a807df.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -281,6 +290,9 @@
       "assets": [
         {
           "name": "FrontEndDeveloper.js"
+        },
+        {
+          "name": "FrontEndDeveloper.ecbf6b27664286a807df.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -330,14 +342,16 @@
     {
       "id": "polyfill",
       "files": [
-        "polyfill.js"
+        "polyfill.js",
+        "polyfill.ecbf6b27664286a807df.hot-update.js"
       ]
     },
     {
       "id": "commons",
       "files": [
         "commons.css",
-        "commons.js"
+        "commons.js",
+        "commons.ecbf6b27664286a807df.hot-update.js"
       ]
     },
     {
@@ -409,7 +423,8 @@
     {
       "id": "FrontEndDeveloper",
       "files": [
-        "FrontEndDeveloper.js"
+        "FrontEndDeveloper.js",
+        "FrontEndDeveloper.ecbf6b27664286a807df.hot-update.js"
       ]
     },
     {

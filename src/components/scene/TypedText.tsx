@@ -63,15 +63,15 @@ const TypedText: React.FC<Props> = ({ handleEnd, animate, ...props }) => {
       <Typewriter
         onInit={(typewriter) => {
           typewriter
-            .pauseFor(1000)
+            .pauseFor(700)
             .typeString(text1)
-            .pauseFor(1000)
+            .pauseFor(700)
             .typeString(text2)
-            .pauseFor(1500)
+            .pauseFor(1000)
             .deleteAll()
-            .pauseFor(1000)
+            .pauseFor(500)
             .typeString(text3)
-            .pauseFor(1000)
+            .pauseFor(700)
             .pasteString(text4, null)
             .pauseFor(300)
             .callFunction(handleEnd)

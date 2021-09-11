@@ -11,8 +11,6 @@ const Svg = styled(motion.svg)(() => ({
   transform: 'translate(-50%)',
 }))
 
-const Path = motion.path
-
 interface Props {
   css?: CSSObject
   animate?: boolean
@@ -21,7 +19,6 @@ interface Props {
 
 const Grass: React.FC<Props> = ({ delay = 0, animate, ...props }) => {
   const svgControls = useAnimation()
-  const pathControls = useAnimation()
 
   const getColor = () => {
     const colors = ['#1d9d00', '#00c400', '#00a800', '#006c00']

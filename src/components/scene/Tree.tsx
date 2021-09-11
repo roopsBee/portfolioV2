@@ -27,7 +27,7 @@ const Tree: React.FC<Props> = ({ delay = 0, animate, ...props }) => {
   useEffect(() => {
     const animation = async () => {
       await svgControls.start('show')
-      await pathControls.start(({ fill, item }) => ({
+      await pathControls.start(({ fill }) => ({
         opacity: 1,
         fill: `${fill}00`,
         stroke: thm.colors['dark-text'],
